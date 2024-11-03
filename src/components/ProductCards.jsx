@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import Card from "./Card";
 
 const ProductCards = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ const ProductCards = () => {
   useEffect(() => {
     if (category) {
       if (category === "All Product") {
-        setProducts(data.slice(0,9));
+        setProducts(data);
       } else {
         const filteredCategory = [...data].filter(
           (coffee) => coffee.category === category
@@ -20,16 +21,14 @@ const ProductCards = () => {
         setProducts(filteredCategory);
       }
     } else {
-      setProducts(data.slice(0,9));
+      setProducts(data.slice(0, 9));
     }
   }, [category, data]);
 
-  console.log(products);
-
   return (
-    <div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map((product) => (
-        <div key={product.product_id}>{product.product_title}</div>
+        <Card key={product.product_id} product={product}></Card>
       ))}
     </div>
   );

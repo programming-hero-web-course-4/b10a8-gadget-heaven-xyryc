@@ -9,11 +9,11 @@ const Home = () => {
     <div>
       <Banner />
 
-      <h2 className="font-bold text-[40px] text-center">
+      <h2 className="font-bold text-[40px] text-center mb-11">
         Explore Cutting-Edge Gadgets
       </h2>
 
-      <div className="flex">
+      <div className="flex flex-col sm:flex-row gap-6 justify-center">
         <Categories categories={categories} />
 
         <Outlet />
