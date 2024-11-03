@@ -12,6 +12,11 @@ const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        children: [
+            {
+              
+            }
+        ]
       },
       {
         path: "/statistics",
