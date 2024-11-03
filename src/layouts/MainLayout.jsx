@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 const MainLayout = () => {
   return (
-    <div className="font-sora">
+    <div className="font-sora container mx-auto px-4">
       <Navbar />
 
       <div>
