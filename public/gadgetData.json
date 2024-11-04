@@ -1,6 +1,6 @@
 [
   {
-    "product_id": "P1001",
+    "product_id": 1001,
     "product_title": "Alienware M15 R6",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Laptops",
@@ -20,7 +20,7 @@
     "warranty": "1-year limited warranty"
   },
   {
-    "product_id": "P1002",
+    "product_id": 1002,
     "product_title": "ASUS ROG G15",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Laptops",
@@ -40,7 +40,7 @@
     "cooling_system": "Arc Flow fans with dual airflow"
   },
   {
-    "product_id": "P1003",
+    "product_id": 1003,
     "product_title": "MSI GE76 Raider",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Laptops",
@@ -60,7 +60,7 @@
     "rgb_lighting": true
   },
   {
-    "product_id": "P1004",
+    "product_id": 1004,
     "product_title": "Razer Blade 15",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Laptops",
@@ -80,7 +80,7 @@
     "refresh_rate": "60Hz (OLED)"
   },
   {
-    "product_id": "P1005",
+    "product_id": 1005,
     "product_title": "Lenovo Legion 5 Pro",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Laptops",
@@ -100,7 +100,7 @@
     "cooling_system": "Dual Burn support"
   },
   {
-    "product_id": "P1006",
+    "product_id": 1006,
     "product_title": "HP Omen 17",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Laptops",
@@ -120,7 +120,7 @@
     "refresh_rate": "165Hz"
   },
   {
-    "product_id": "P1007",
+    "product_id": 1007,
     "product_title": "iPhone 14 Pro Max",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Phones",
@@ -141,7 +141,7 @@
     "5g_support": true
   },
   {
-    "product_id": "P1008",
+    "product_id": 1008,
     "product_title": "Galaxy S23 Ultra",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Phones",
@@ -162,7 +162,7 @@
     "fast_charging": "45W"
   },
   {
-    "product_id": "P1009",
+    "product_id": 1009,
     "product_title": "Google Pixel 7 Pro",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Phones",
@@ -183,7 +183,7 @@
     "5g_support": true
   },
   {
-    "product_id": "P1010",
+    "product_id": 1010,
     "product_title": "OnePlus 11",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Phones",
@@ -205,7 +205,7 @@
   },
 
   {
-    "product_id": "P1011",
+    "product_id": 1011,
     "product_title": "AirPods Pro (2nd Gen)",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Accessories",
@@ -225,7 +225,7 @@
     "water_resistance": "IPX4"
   },
   {
-    "product_id": "P1012",
+    "product_id": 1012,
     "product_title": "Galaxy Watch 5 Pro",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Accessories",
@@ -245,7 +245,7 @@
     "compatibility": "Android"
   },
   {
-    "product_id": "P1013",
+    "product_id": 1013,
     "product_title": "Anker PowerCore",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Accessories",
@@ -265,7 +265,7 @@
     "warranty": "18 months"
   },
   {
-    "product_id": "P1014",
+    "product_id": 1014,
     "product_title": "Logitech MX 3S Mouse",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Accessories",
@@ -286,7 +286,7 @@
   },
 
   {
-    "product_id": "P1015",
+    "product_id": 1015,
     "product_title": "Apple Watch Series 9",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Smartwatches",
@@ -307,7 +307,7 @@
     "cellular": true
   },
   {
-    "product_id": "P1016",
+    "product_id": 1016,
     "product_title": "Galaxy Watch 6",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Smartwatches",
@@ -328,7 +328,7 @@
     "fast_charging": true
   },
   {
-    "product_id": "P1017",
+    "product_id": 1017,
     "product_title": "Garmin Venu 2 Plus",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Smartwatches",
@@ -349,7 +349,7 @@
     "color": "Graphite"
   },
   {
-    "product_id": "P1018",
+    "product_id": 1018,
     "product_title": "Fitbit Sense 2",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Smartwatches",
@@ -371,7 +371,7 @@
   },
 
   {
-    "product_id": "P1019",
+    "product_id": 1019,
     "product_title": "MacBook Air M2",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Macbook",
@@ -392,7 +392,7 @@
     "ports": ["MagSafe 3", "2x Thunderbolt", "3.5mm Headphone Jack"]
   },
   {
-    "product_id": "P1020",
+    "product_id": 1020,
     "product_title": "MacBook Pro M2 Pro",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Macbook",
@@ -413,7 +413,7 @@
     "ports": ["MagSafe 3", "3x Thunderbolt 4", "HDMI", "SDXC Card Slot"]
   },
   {
-    "product_id": "P1021",
+    "product_id": 1021,
     "product_title": "MacBook Pro M2 Max",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Macbook",
@@ -434,7 +434,7 @@
     "ports": ["MagSafe 3", "3x Thunderbolt 4", "HDMI", "SDXC Card Slot"]
   },
   {
-    "product_id": "P1022",
+    "product_id": 1022,
     "product_title": "MacBook Air M2 15''",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Macbook",
@@ -456,7 +456,7 @@
   },
 
   {
-    "product_id": "P1023",
+    "product_id": 1023,
     "product_title": "iPhone 15 Pro",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Iphone",
@@ -477,7 +477,7 @@
     "water_resistance": "IP68"
   },
   {
-    "product_id": "P1024",
+    "product_id": 1024,
     "product_title": "iPhone 15",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Iphone",
@@ -498,7 +498,7 @@
     "water_resistance": "IP68"
   },
   {
-    "product_id": "P1025",
+    "product_id": 1025,
     "product_title": "iPhone 14 Pro Max",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Iphone",
@@ -519,7 +519,7 @@
     "water_resistance": "IP68"
   },
   {
-    "product_id": "P1026",
+    "product_id": 1026,
     "product_title": "iPhone SE 3rd Gen",
     "product_image": "https://pic.clubic.com/a3b925002198334/1200x900/smart/macbook-air-m3-de-15-pouces.jpg",
     "category": "Iphone",
