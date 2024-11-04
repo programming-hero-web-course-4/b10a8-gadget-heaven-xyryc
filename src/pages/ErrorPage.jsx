@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 const ErrorPage = () => {
   return (
-    <div className="text-center">
+    <div className="text-center container mx-auto px-4">
       <Navbar></Navbar>
 
       <div className="py-14">
