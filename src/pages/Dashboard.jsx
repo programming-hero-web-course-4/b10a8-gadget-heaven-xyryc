@@ -4,12 +4,12 @@ import { useLoaderData } from "react-router-dom";
 import { TbSortDescending2 } from "react-icons/tb";
 
 const Dashboard = () => {
-  const [activeTab, setActiveTab] = useState("cart"); // Track active tab
+  const [activeTab, setActiveTab] = useState("cart");
   const [items, setItems] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const allProducts = useLoaderData();
 
-  // Fetch items based on the active tab (cart or wishlist)
   useEffect(() => {
     if (activeTab === "cart") {
       const storedCartList = getCartList();
@@ -20,6 +20,13 @@ const Dashboard = () => {
       );
 
       setItems(cartList);
+
+      // Calculate total price
+      const calculatedTotalPrice = cartList.reduce(
+        (acc, product) => acc + product.price,
+        0
+      );
+      setTotalPrice(calculatedTotalPrice);
     } else {
       const storedWishList = getStoredWishList();
       const storedWishListInt = storedWishList.map((id) => parseInt(id));
@@ -32,7 +39,11 @@ const Dashboard = () => {
     }
   }, [activeTab, allProducts]);
 
-  // Toggle active tab and fetch items
+  const handleSortByPrice = () => {
+    const sortedItems = [...items].sort((a, b) => b.price - a.price);
+    setItems(sortedItems);
+  };
+
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
@@ -42,8 +53,9 @@ const Dashboard = () => {
       <h1>Cart</h1>
 
       <div className="flex flex-col sm:flex-row gap-5 items-center">
-        <p>Total Cost: $999</p>
-        <button className="btn btn-outline text-[#8332C5] rounded-[32px]">
+        <p>Total Cost: $ {totalPrice}</p>
+        <button onClick={handleSortByPrice}
+         className="btn btn-outline text-[#8332C5] rounded-[32px]">
           Sort by Price <TbSortDescending2 />
         </button>
         <button className="btn text-white bg-gradient-to-b from-[#8332C5] to-[#9538E2] rounded-[32px]">
