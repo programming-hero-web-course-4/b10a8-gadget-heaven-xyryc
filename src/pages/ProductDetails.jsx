@@ -48,7 +48,7 @@ const ProductDetails = () => {
         <div>
           <h1 className="text-[28px] font-semibold mb-3">{product_title}</h1>
           <p className="text-xl font-semibold text-gray-800 mb-4">
-            Price: ${price}
+            Price: $ {price}
           </p>
           <button className="btn btn-sm btn-outline rounded-[32px] btn-success">
             {availability ? "In Stock" : "Out of Stock"}

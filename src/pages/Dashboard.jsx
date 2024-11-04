@@ -38,10 +38,10 @@ const Dashboard = () => {
   };
 
   const cartDiv = (
-    <div className="flex justify-between items-center">
+    <div className="flex flex-col sm:flex-row justify-between items-center">
       <h1>Cart</h1>
 
-      <div className="flex gap-5 items-center">
+      <div className="flex flex-col sm:flex-row gap-5 items-center">
         <p>Total Cost: $999</p>
         <button className="btn btn-outline text-[#8332C5] rounded-[32px]">
           Sort by Price <TbSortDescending2 />
