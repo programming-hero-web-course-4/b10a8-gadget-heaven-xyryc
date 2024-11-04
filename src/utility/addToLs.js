@@ -54,4 +54,4 @@ const getStoredWishList = () => {
   };
 
 
-export {addToCart, addToWishList}
+export {addToCart, addToWishList, getCartList, getStoredWishList}

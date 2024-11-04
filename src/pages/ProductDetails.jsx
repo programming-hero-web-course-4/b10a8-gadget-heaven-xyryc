@@ -25,7 +25,7 @@ const ProductDetails = () => {
 
   return (
     <div>
-      <div className="w-3/5 mx-auto text-center mb-8">
+      <div className="md:w-3/5 mx-auto text-center mb-8">
         <h1 className="font-bold text-[32px] mb-4">Product Details</h1>
         <p className="">
           Explore the latest gadgets that will take your experience to the next
