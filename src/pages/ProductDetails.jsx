@@ -4,6 +4,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import { addToCart, addToWishList } from "../utility/addToLs";
 import { useContext } from "react";
 import { CartContext, WishlistContext } from "../layouts/MainLayout";
+import ReactStars from "react-rating-stars-component";
+import { FaStar } from "react-icons/fa";
 
 const ProductDetails = () => {
   const { productId } = useParams(); //dynamic url
@@ -54,7 +56,6 @@ const ProductDetails = () => {
             {availability ? "In Stock" : "Out of Stock"}
           </button>
           <p className="my-4  text-lg text-gray-600">{description}</p>
-
           <p className="mb-2 text-lg font-bold">Specification</p>
           <ol className="text-lg text-gray-600 mb-4">
             {Specification.map((spec, index) => (
@@ -64,8 +65,26 @@ const ProductDetails = () => {
             ))}
           </ol>
 
-          <p className="font-bold text-lg">Rating: {rating}</p>
+          <div className="flex items-center gap-1">
+            <p className="font-bold text-lg">Rating:</p>{" "}
+            <span className="text-yellow-500 ">
+              <FaStar />
+            </span>
+          </div>
 
+          <div className="flex items-center gap-7 font-medium">
+            <ReactStars
+              count={5}
+              value={rating}
+              size={24}
+              isHalf={true}
+              emptyIcon={<i className="far fa-star"></i>}
+              halfIcon={<i className="fa fa-star-half-alt"></i>}
+              fullIcon={<i className="fa fa-star"></i>}
+              activeColor="#ffd700"
+            />{" "}
+            {rating}
+          </div>
           <div className="space-x-4 mt-4">
             <a
               onClick={() => {

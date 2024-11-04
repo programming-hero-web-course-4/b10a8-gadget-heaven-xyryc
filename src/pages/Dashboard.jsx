@@ -54,8 +54,10 @@ const Dashboard = () => {
 
       <div className="flex flex-col sm:flex-row gap-5 items-center">
         <p>Total Cost: $ {totalPrice}</p>
-        <button onClick={handleSortByPrice}
-         className="btn btn-outline text-[#8332C5] rounded-[32px]">
+        <button
+          onClick={handleSortByPrice}
+          className="btn btn-outline text-[#8332C5] rounded-[32px]"
+        >
           Sort by Price <TbSortDescending2 />
         </button>
         <button className="btn text-white bg-gradient-to-b from-[#8332C5] to-[#9538E2] rounded-[32px]">
