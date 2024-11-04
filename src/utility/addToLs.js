@@ -1,8 +1,4 @@
-
 import { toast } from "react-toastify";
-
-
-
 
 const getCartList = () => {
   const storedListStr = localStorage.getItem("gadget-heaven-cart");
@@ -56,4 +52,14 @@ const addToWishList = (id) => {
   }
 };
 
-export { addToCart, addToWishList, getCartList, getStoredWishList };
+const clearCartList = () => {
+  localStorage.removeItem("gadget-heaven-cart");
+};
+
+export {
+  addToCart,
+  addToWishList,
+  getCartList,
+  getStoredWishList,
+  clearCartList,
+};

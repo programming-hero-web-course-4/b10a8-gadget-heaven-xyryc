@@ -8,7 +8,7 @@ const Banner = () => {
         <h1 className="text-[56px] font-bold mb-6">
           Upgrade Your Tech Accessorize with Gadget Heaven Accessories
         </h1>
-        <p className="mb-8">
+        <p className="mb-8 sm:w-3/5 mx-auto">
           Explore the latest gadgets that will take your experience to the next
           level. From smart devices to the coolest accessories, we have it all!
         </p>
@@ -17,11 +17,12 @@ const Banner = () => {
         </NavLink>
       </div>
 
-      <div className="absolute -bottom-28 sm:-bottom-40 md:-bottom-56 lg:-bottom-80 2xl:-bottom-[500px] rounded-[32px] p-6 border mx-4 lg:mx-52">
+      <div className="absolute -bottom-28 sm:-bottom-40 md:-bottom-56 lg:-bottom-80 2xl:-bottom-[500px] rounded-[32px] p-6 border mx-4 lg:mx-52 backdrop-blur-3xl">
         <img
           className="rounded-3xl object-cover"
           src={BannerImage}
           alt="banner image"
+          style={{ objectPosition: "center bottom" }}
         />
       </div>
     </div>

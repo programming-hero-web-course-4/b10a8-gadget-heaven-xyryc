@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
-import { getCartList, getStoredWishList } from "../utility/addToLs";
+import {
+  clearCartList,
+  getCartList,
+  getStoredWishList,
+} from "../utility/addToLs";
 import { useLoaderData } from "react-router-dom";
 import { TbSortDescending2 } from "react-icons/tb";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
+import SuccessImg from "../assets/success.png";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("cart");
@@ -10,6 +16,9 @@ const Dashboard = () => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const allProducts = useLoaderData();
+
+  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (activeTab === "cart") {
@@ -49,9 +58,21 @@ const Dashboard = () => {
     setActiveTab(tab);
   };
 
+  const handlePurchase = () => {
+    setShowModal(true);
+    setItems([]);
+    clearCartList();
+  };
+
+  const handleCloseModal = () => {
+    setTotalPrice(0);
+    setShowModal(false);
+    navigate("/");
+  };
+
   const cartDiv = (
     <div className="flex flex-col sm:flex-row justify-between items-center">
-         <Helmet>
+      <Helmet>
         <title>Dashboard | Gadget Heaven</title>
       </Helmet>
 
@@ -65,7 +86,13 @@ const Dashboard = () => {
         >
           Sort by Price <TbSortDescending2 />
         </button>
-        <button className="btn text-white bg-gradient-to-b from-[#8332C5] to-[#9538E2] rounded-[32px]">
+        <button
+          onClick={handlePurchase}
+          disabled={totalPrice === 0}
+          className={`btn text-white bg-gradient-to-b from-[#8332C5] to-[#9538E2] rounded-[32px] ${
+            totalPrice === 0 ? "opacity-50 cursor-not-allowed" : ""
+          }`}
+        >
           Purchase
         </button>
       </div>
@@ -74,6 +101,20 @@ const Dashboard = () => {
 
   return (
     <div>
+      {showModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-lg text-center">
+            <img className="mx-auto" src={SuccessImg} alt="" />
+            <h2 className="text-2xl font-bold my-6">Payment Successful!</h2>
+            <p className="mb-1 text-gray-600 font-medium">Thanks for purchasing</p>
+            <p className="mb-4 text-gray-600 font-medium">Total: ${totalPrice}</p>
+            <button onClick={handleCloseModal} className="btn btn-wide rounded-[32px] bg-gray-300">
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className=" text-center mb-8">
         <h1 className="font-bold text-[32px] mb-4">Dashboard</h1>
         <p className="md:w-3/5 mx-auto">
