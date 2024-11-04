@@ -18,10 +18,14 @@ const Home = () => {
         Explore Cutting-Edge Gadgets
       </h2>
 
-      <div className="flex flex-col sm:flex-row gap-6 justify-center">
-        <Categories categories={categories} />
+      <div className="sm:grid grid-cols-12 gap-6 ">
+        <div className="sm:col-span-3 lg:col-span-2">
+          <Categories categories={categories} />
+        </div>
 
-        <Outlet />
+        <div className="sm:col-span-9 lg:col-span-10">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

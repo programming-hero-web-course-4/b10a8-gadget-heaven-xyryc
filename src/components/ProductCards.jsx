@@ -21,7 +21,7 @@ const ProductCards = () => {
         setProducts(filteredCategory);
       }
     } else {
-      setProducts(data.slice(0, 9));
+      setProducts(data.slice(2, 11));
     }
   }, [category, data]);
 

@@ -10,6 +10,7 @@ import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import SuccessImg from "../assets/success.png";
 
+
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("cart");
   const [items, setItems] = useState([]);
@@ -106,9 +107,16 @@ const Dashboard = () => {
           <div className="bg-white p-8 rounded-lg text-center">
             <img className="mx-auto" src={SuccessImg} alt="" />
             <h2 className="text-2xl font-bold my-6">Payment Successful!</h2>
-            <p className="mb-1 text-gray-600 font-medium">Thanks for purchasing</p>
-            <p className="mb-4 text-gray-600 font-medium">Total: ${totalPrice}</p>
-            <button onClick={handleCloseModal} className="btn btn-wide rounded-[32px] bg-gray-300">
+            <p className="mb-1 text-gray-600 font-medium">
+              Thanks for purchasing
+            </p>
+            <p className="mb-4 text-gray-600 font-medium">
+              Total: ${totalPrice}
+            </p>
+            <button
+              onClick={handleCloseModal}
+              className="btn btn-wide rounded-[32px] bg-gray-300"
+            >
               Close
             </button>
           </div>
@@ -159,16 +167,37 @@ const Dashboard = () => {
                     src={item.product_image}
                     alt={item.product_title}
                   />
-                  <div>
-                    <h3 className="font-semibold text-2xl">
-                      {item.product_title}
-                    </h3>
-                    <p className="text-lg text-gray-600 mt-3 mb-4">
-                      {item.description}
-                    </p>
-                    <p className="font-semibold text-xl text-gray-800">
-                      Price: ${item.price}
-                    </p>
+
+                  <div className="flex w-full justify-between">
+                    <div>
+                      <h3 className="font-semibold text-2xl">
+                        {item.product_title}
+                      </h3>
+                      <p className="text-lg text-gray-600 mt-3 mb-4">
+                        {item.description}
+                      </p>
+                      <p className="font-semibold text-xl text-gray-800">
+                        Price: ${item.price}
+                      </p>
+                    </div>
+
+                    {/* remove button */}
+                    <button className="btn btn-circle btn-outline text-red-600">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
               ))}

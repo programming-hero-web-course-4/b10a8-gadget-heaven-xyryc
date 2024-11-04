@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 /* eslint-disable react/prop-types */
 const Categories = ({ categories }) => {
   return (
-    <div className="flex flex-col p-6 gap-6 border rounded-2xl ">
+    <div className="flex flex-col p-6 gap-6 border rounded-2xl">
       {categories.map((category) => (
         <NavLink
           key={category.id}
