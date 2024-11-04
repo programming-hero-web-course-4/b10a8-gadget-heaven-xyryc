@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getCartList, getStoredWishList } from "../utility/addToLs";
 import { useLoaderData } from "react-router-dom";
 import { TbSortDescending2 } from "react-icons/tb";
+import { Helmet } from "react-helmet-async";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("cart");
@@ -50,6 +51,10 @@ const Dashboard = () => {
 
   const cartDiv = (
     <div className="flex flex-col sm:flex-row justify-between items-center">
+         <Helmet>
+        <title>Dashboard | Gadget Heaven</title>
+      </Helmet>
+
       <h1>Cart</h1>
 
       <div className="flex flex-col sm:flex-row gap-5 items-center">

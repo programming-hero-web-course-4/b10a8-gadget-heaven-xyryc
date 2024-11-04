@@ -6,6 +6,7 @@ import { useContext } from "react";
 import { CartContext, WishlistContext } from "../layouts/MainLayout";
 import ReactStars from "react-rating-stars-component";
 import { FaStar } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetails = () => {
   const { productId } = useParams(); //dynamic url
@@ -32,6 +33,10 @@ const ProductDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Product Details | Gadget Heaven</title>
+      </Helmet>
+
       <div className="md:w-3/5 mx-auto text-center mb-8">
         <h1 className="font-bold text-[32px] mb-4">Product Details</h1>
         <p className="">
@@ -82,7 +87,7 @@ const ProductDetails = () => {
               halfIcon={<i className="fa fa-star-half-alt"></i>}
               fullIcon={<i className="fa fa-star"></i>}
               activeColor="#ffd700"
-            />{" "}
+            />
             {rating}
           </div>
           <div className="space-x-4 mt-4">
@@ -93,7 +98,7 @@ const ProductDetails = () => {
               }}
               className="btn rounded-[32px] bg-[#9538E2] text-white"
             >
-              Add to cart
+              Add To Cart
               <IoCartOutline />
             </a>
             <a

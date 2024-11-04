@@ -1,10 +1,15 @@
 import { NavLink } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Helmet } from "react-helmet-async";
 
 const ErrorPage = () => {
   return (
     <div className="text-center container mx-auto px-4">
+         <Helmet>
+        <title>Error 404 | Gadget Heaven</title>
+      </Helmet>
+
       <Navbar></Navbar>
 
       <div className="py-14">
