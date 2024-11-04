@@ -1,6 +1,7 @@
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToCart, addToWishList } from "../utility/addToLs";
 
 const ProductDetails = () => {
   const { productId } = useParams(); //dynamic url
@@ -12,6 +13,7 @@ const ProductDetails = () => {
   );
 
   const {
+    product_id: currentId,
     product_image,
     product_title,
     price,
@@ -31,7 +33,7 @@ const ProductDetails = () => {
         </p>
       </div>
 
-      <div className="mb-24 md:flex gap-8 justify-center p-8 bg-white">
+      <div className="mb-24 flex flex-col md:flex-row gap-8 justify-center p-8 bg-white">
         <img
           className="h-[500px] w-[425px] rounded-2xl object-cover"
           src={product_image}
@@ -40,7 +42,9 @@ const ProductDetails = () => {
 
         <div>
           <h1 className="text-[28px] font-semibold mb-3">{product_title}</h1>
-          <p className="text-xl font-semibold text-gray-800 mb-4">Price: ${price}</p>
+          <p className="text-xl font-semibold text-gray-800 mb-4">
+            Price: ${price}
+          </p>
           <button className="btn btn-sm btn-outline rounded-[32px] btn-success">
             {availability ? "In Stock" : "Out of Stock"}
           </button>
@@ -57,11 +61,14 @@ const ProductDetails = () => {
 
           <p className="font-bold text-lg">Rating: {rating}</p>
 
-          <div className="space-x-4">
-            <a className="btn rounded-[32px] bg-[#9538E2] text-white">
-              Add to cart<IoCartOutline />
+          <div className="space-x-4 mt-4">
+              <a onClick={()=> addToCart(currentId)}
+             className="btn rounded-[32px] bg-[#9538E2] text-white">
+              Add to cart
+              <IoCartOutline />
             </a>
-            <a className="btn btn-circle btn-outline">
+            <a onClick={()=> addToWishList(currentId)}
+            className="btn btn-circle btn-outline">
               <FaRegHeart />
             </a>
           </div>

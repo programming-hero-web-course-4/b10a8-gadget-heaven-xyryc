@@ -1,12 +1,14 @@
 const Footer = () => {
   return (
     <footer className="py-24 text-center">
-      <div className="mb-16">
+      <div>
         <h1 className="text-[32px] font-bold mb-3">Gadget Heaven</h1>
         <p className="font-medium text-gray-600">
           Leading the way in cutting-edge technology and innovation.
         </p>
       </div>
+      
+      <div className="border-t my-8"></div>
 
       <div className="md:flex justify-center gap-40">
         <div>
