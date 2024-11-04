@@ -1,7 +1,11 @@
-import { toast } from 'react-toastify';
+
+import { toast } from "react-toastify";
+
+
+
 
 const getCartList = () => {
-  const storedListStr = localStorage.getItem("cart");
+  const storedListStr = localStorage.getItem("gadget-heaven-cart");
 
   if (storedListStr) {
     const storedList = JSON.parse(storedListStr);
@@ -20,38 +24,36 @@ const addToCart = (id) => {
   } else {
     storedList.push(id);
     const storedListStr = JSON.stringify(storedList);
-    localStorage.setItem("cart", storedListStr);
+    localStorage.setItem("gadget-heaven-cart", storedListStr);
 
     toast.success("Item added to cart.");
   }
 };
 
-
 const getStoredWishList = () => {
-    const storedWishListStr = localStorage.getItem("wishlist");
-  
-    if (storedWishListStr) {
-      const storedWishList = JSON.parse(storedWishListStr);
-      return storedWishList;
-    } else {
-      return [];
-    }
-  };
-  
-  const addToWishList = (id) => {
-    const storedWishList = getStoredWishList();
-  
-    if (storedWishList.includes(id)) {
-      // already exist
-      toast.error("Already exist in the wishlist!");
-    } else {
-      storedWishList.push(id);
-      const storedWishListStr = JSON.stringify(storedWishList);
-      localStorage.setItem("wishlist", storedWishListStr);
-  
-      toast.success("Item added to your wishlist.");
-    }
-  };
+  const storedWishListStr = localStorage.getItem("gadget-heaven-wishlist");
 
+  if (storedWishListStr) {
+    const storedWishList = JSON.parse(storedWishListStr);
+    return storedWishList;
+  } else {
+    return [];
+  }
+};
 
-export {addToCart, addToWishList, getCartList, getStoredWishList}
+const addToWishList = (id) => {
+  const storedWishList = getStoredWishList();
+
+  if (storedWishList.includes(id)) {
+    // already exist
+    toast.error("Already exist in the wishlist!");
+  } else {
+    storedWishList.push(id);
+    const storedWishListStr = JSON.stringify(storedWishList);
+    localStorage.setItem("gadget-heaven-wishlist", storedWishListStr);
+
+    toast.success("Item added to your wishlist.");
+  }
+};
+
+export { addToCart, addToWishList, getCartList, getStoredWishList };

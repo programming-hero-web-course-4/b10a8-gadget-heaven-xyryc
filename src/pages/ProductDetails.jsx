@@ -2,6 +2,8 @@ import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { useLoaderData, useParams } from "react-router-dom";
 import { addToCart, addToWishList } from "../utility/addToLs";
+import { useContext } from "react";
+import { CartContext, WishlistContext } from "../layouts/MainLayout";
 
 const ProductDetails = () => {
   const { productId } = useParams(); //dynamic url
@@ -22,6 +24,9 @@ const ProductDetails = () => {
     Specification,
     rating,
   } = selectedProduct;
+
+  const [cart, setCart] = useContext(CartContext);
+  const [wishlist, setWishlist] = useContext(WishlistContext);
 
   return (
     <div>
@@ -62,13 +67,23 @@ const ProductDetails = () => {
           <p className="font-bold text-lg">Rating: {rating}</p>
 
           <div className="space-x-4 mt-4">
-              <a onClick={()=> addToCart(currentId)}
-             className="btn rounded-[32px] bg-[#9538E2] text-white">
+            <a
+              onClick={() => {
+                addToCart(currentId);
+                setCart(cart + 1);
+              }}
+              className="btn rounded-[32px] bg-[#9538E2] text-white"
+            >
               Add to cart
               <IoCartOutline />
             </a>
-            <a onClick={()=> addToWishList(currentId)}
-            className="btn btn-circle btn-outline">
+            <a
+              onClick={() => {
+                addToWishList(currentId);
+                setWishlist(wishlist + 1);
+              }}
+              className="btn btn-circle btn-outline"
+            >
               <FaRegHeart />
             </a>
           </div>

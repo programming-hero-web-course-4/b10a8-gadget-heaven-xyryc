@@ -46,7 +46,9 @@ const Dashboard = () => {
         <button className="btn btn-outline text-[#8332C5] rounded-[32px]">
           Sort by Price <TbSortDescending2 />
         </button>
-        <button className="btn text-white bg-[#8332C5] rounded-[32px]">Purchase</button>
+        <button className="btn text-white bg-gradient-to-b from-[#8332C5] to-[#9538E2] rounded-[32px]">
+          Purchase
+        </button>
       </div>
     </div>
   );
@@ -112,7 +114,9 @@ const Dashboard = () => {
               ))}
             </div>
           ) : (
-            <p>No items in {activeTab}.</p>
+            <p className="text-center py-8 font-extrabold text-5xl">
+              No items in {activeTab}.
+            </p>
           )}
         </div>
       </div>
