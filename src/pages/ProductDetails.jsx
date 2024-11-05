@@ -75,7 +75,7 @@ const ProductDetails = () => {
           <img
             className="h-[570px] w-[425px] rounded-2xl object-cover"
             src={product_image}
-            alt=""
+            alt={product_title}
           />
 
           <div>
@@ -83,7 +83,7 @@ const ProductDetails = () => {
             <p className="text-xl font-semibold text-gray-800 mb-4">
               Price: $ {price}
             </p>
-            <button className="btn btn-sm btn-outline rounded-[32px] btn-success">
+            <button className={`btn btn-sm btn-outline rounded-[32px] ${availability ? 'btn-success': 'btn-error'}`}>
               {availability ? "In Stock" : "Out of Stock"}
             </button>
             <p className="my-4  text-lg text-gray-600">{description}</p>

@@ -12,7 +12,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -39,6 +39,7 @@ const routes = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics />,
+        loader: () => fetch("../gadgetData.json"),
       },
       {
         path: "/dashboard",
