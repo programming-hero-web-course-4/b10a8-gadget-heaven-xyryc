@@ -11,12 +11,12 @@ const MainLayout = () => {
   const [wishlist, setWishlist] = useState(0);
 
   return (
-    <div className="font-sora container mx-auto px-4">
+    <div className="font-sora ">
       <CartContext.Provider value={[cart, setCart]}>
         <WishlistContext.Provider value={[wishlist, setWishlist]}>
           <Navbar />
 
-          <div>
+          <div className="">
             <Outlet />
           </div>
 

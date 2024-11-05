@@ -10,7 +10,6 @@ import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import SuccessImg from "../assets/success.png";
 
-
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("cart");
   const [items, setItems] = useState([]);
@@ -124,17 +123,13 @@ const Dashboard = () => {
       )}
 
       <div className=" text-center mb-8">
-        <h1 className="font-bold text-[32px] mb-4">Dashboard</h1>
-        <p className="md:w-3/5 mx-auto">
-          Explore the latest gadgets that will take your experience to the next
-          level. From smart devices to the coolest accessories, we have it all!
-        </p>
-
-        <div className="mt-8 mb-20 space-x-6">
+        <div className="pb-8 space-x-6 border bg-[#9538E2] border-t-2 border-[#9538E2] mb-12">
           <button
             onClick={() => handleTabClick("cart")}
-            className={`btn btn-wide rounded-[32px] ${
-              activeTab === "cart" ? "bg-white text-[#9538E2]" : "btn-outline"
+            className={`btn btn-wide rounded-[32px]  ${
+              activeTab === "cart"
+                ? "bg-white text-[#9538E2]"
+                : "btn-outline text-white"
             }`}
           >
             Cart
@@ -144,14 +139,14 @@ const Dashboard = () => {
             className={`btn btn-wide rounded-[32px] ${
               activeTab === "wishlist"
                 ? "bg-white text-[#9538E2]"
-                : "btn-outline "
+                : "btn-outline  text-white"
             }`}
           >
             Wishlist
           </button>
         </div>
 
-        <div className="text-left">
+        <div className="text-left container mx-auto px-4">
           <h3 className="font-bold text-2xl mb-8">
             {activeTab === "cart" ? cartDiv : "Wishlist"}
           </h3>

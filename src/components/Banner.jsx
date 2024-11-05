@@ -3,7 +3,7 @@ import BannerImage from "../assets/banner.jpg";
 
 const Banner = () => {
   return (
-    <div className="relative">
+    <div className="container mx-auto px-4">
       <div className="bg-[#9538E2]  text-center text-white pt-[118px]  pb-[268px] rounded-[32px] px-2 mb-36 sm:mb-56 lg:mb-[490px]">
         <h1 className="text-[56px] font-bold mb-6">
           Upgrade Your Tech Accessorize with Gadget Heaven Accessories

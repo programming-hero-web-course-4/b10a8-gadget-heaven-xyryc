@@ -6,7 +6,7 @@ const Statistics = () => {
       <Helmet>
         <title>Statistics | Gadget Heaven</title>
       </Helmet>
-      Work in Progress!!!
+      
     </div>
   );
 };
