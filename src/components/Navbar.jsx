@@ -32,6 +32,13 @@ const Navbar = () => {
         level. From smart devices to the coolest accessories, we have it all!"
         />
       );
+    } else if (pathname === "/about") {
+      return (
+        <Header
+          title="Welcome to Gadget Heaven"
+          description="Explore the newest tech and gadgets, all in one place. Find the latest devices and accessories to elevate your experience."
+        />
+      );
     }
     return null;
   };
@@ -39,13 +46,42 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/" className={({isActive})=> `${isActive ? 'underline' : ''}` }>Home</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) => `${isActive ? "underline" : ""}`}
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/statistics" className={({isActive})=> `${isActive ? 'text-[#9538E2] font-bold' : ''}` }>Statistics</NavLink>
+        <NavLink
+          to="/statistics"
+          className={({ isActive }) =>
+            `${isActive ? "text-[#9538E2] font-bold" : ""}`
+          }
+        >
+          Statistics
+        </NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard" className={({isActive})=> `${isActive ? 'text-[#9538E2] font-bold' : ''}` }>Dashboard</NavLink>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            `${isActive ? "text-[#9538E2] font-bold" : ""}`
+          }
+        >
+          Dashboard
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) =>
+            `${isActive ? "text-[#9538E2] font-bold" : ""}`
+          }
+        >
+          About
+        </NavLink>
       </li>
     </>
   );

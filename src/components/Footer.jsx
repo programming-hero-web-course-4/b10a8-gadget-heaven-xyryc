@@ -19,18 +19,16 @@ const Footer = () => {
           <p className="text-gray-600 mb-2">Returns</p>
         </div>
         <div>
-          <h3 className="font-bold text-lg mb-4">Services</h3>
-          <p className="text-gray-600 mb-2">Product Support</p>
-          <p className="text-gray-600 mb-2">Order Tracking</p>
-          <p className="text-gray-600 mb-2">Shipping & Delivery</p>
-          <p className="text-gray-600 mb-2">Returns</p>
+          <h3 className="font-bold text-lg mb-4">Company</h3>
+          <p className="text-gray-600 mb-2">About Us</p>
+          <p className="text-gray-600 mb-2">Careers</p>
+          <p className="text-gray-600 mb-2">Contact</p>
         </div>
         <div>
-          <h3 className="font-bold text-lg mb-4">Services</h3>
-          <p className="text-gray-600 mb-2">Product Support</p>
-          <p className="text-gray-600 mb-2">Order Tracking</p>
-          <p className="text-gray-600 mb-2">Shipping & Delivery</p>
-          <p className="text-gray-600 mb-2">Returns</p>
+          <h3 className="font-bold text-lg mb-4">Legal</h3>
+          <p className="text-gray-600 mb-2">Terms of Service</p>
+          <p className="text-gray-600 mb-2">Privacy Policy</p>
+          <p className="text-gray-600 mb-2">Cookie Policy</p>
         </div>
       </div>
     </footer>

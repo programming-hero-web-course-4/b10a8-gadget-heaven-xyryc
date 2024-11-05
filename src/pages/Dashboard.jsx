@@ -158,7 +158,7 @@ const Dashboard = () => {
                   className="flex flex-col sm:flex-row gap-8 p-8"
                 >
                   <img
-                    className=" h-[124px] rounded-xl object-cover"
+                    className="h-[124px] w-[200px] rounded-xl object-cover"
                     src={item.product_image}
                     alt={item.product_title}
                   />
@@ -171,9 +171,10 @@ const Dashboard = () => {
                       <p className="text-lg text-gray-600 mt-3 mb-4">
                         {item.description}
                       </p>
-                      <p className="font-semibold text-xl text-gray-800">
+                      <p className="font-semibold text-xl text-gray-800 mb-4">
                         Price: ${item.price}
                       </p>
+                      <button className={` ${activeTab === 'wishlist' ? "" : "hidden"} btn btn-sm rounded-[32px] bg-[#9538E2] text-white`}>Add to Cart</button>
                     </div>
 
                     {/* remove button */}

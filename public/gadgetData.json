@@ -35,7 +35,7 @@
       "Dolby Atmos Sound"
     ],
     "availability": true,
-    "rating": 4.7,
+    "rating": 3.7,
     "brand": "ASUS ROG",
     "cooling_system": "Arc Flow fans with dual airflow"
   },
@@ -55,7 +55,7 @@
       "Per-key RGB SteelSeries Keyboard"
     ],
     "availability": true,
-    "rating": 4.9,
+    "rating": 5.0,
     "brand": "MSI",
     "rgb_lighting": true
   },
@@ -135,7 +135,7 @@
       "iOS 16"
     ],
     "availability": true,
-    "rating": 4.9,
+    "rating": 4.0,
     "brand": "Apple",
     "release_year": 2023,
     "5g_support": true
@@ -177,7 +177,7 @@
       "Android 13"
     ],
     "availability": true,
-    "rating": 4.7,
+    "rating": 3.5,
     "brand": "Google",
     "water_resistance": "IP68",
     "5g_support": true
