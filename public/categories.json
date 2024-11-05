@@ -5,23 +5,23 @@
   },
   {
     "id": 2,
-    "category": "Laptops"
+    "category": "Macbook"
   },
   {
     "id": 3,
-    "category": "Phones"
+    "category": "Laptops"
   },
   {
     "id": 4,
-    "category": "Accessories"
+    "category": "Phones"
   },
   {
     "id": 5,
-    "category": "Smartwatches"
+    "category": "Accessories"
   },
   {
     "id": 6,
-    "category": "Macbook"
+    "category": "Smartwatches"
   },
   {
     "id": 7,

@@ -10,7 +10,6 @@ const Navbar = () => {
 
   const { pathname } = useLocation();
 
-
   const renderBannerOrHeader = () => {
     if (
       pathname === "/" ||
@@ -40,20 +39,33 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" className={({isActive})=> `${isActive ? 'underline' : ''}` }>Home</NavLink>
       </li>
       <li>
-        <NavLink to="/statistics">Statistics</NavLink>
+        <NavLink to="/statistics" className={({isActive})=> `${isActive ? 'text-[#9538E2] font-bold' : ''}` }>Statistics</NavLink>
       </li>
       <li>
-        <NavLink to="/dashboard">Dashboard</NavLink>
+        <NavLink to="/dashboard" className={({isActive})=> `${isActive ? 'text-[#9538E2] font-bold' : ''}` }>Dashboard</NavLink>
       </li>
     </>
   );
 
   return (
     <div>
-      <div className={`navbar container mx-auto md:mt-3 px-4 ${pathname === '/' ? 'bg-[#9538E2] md:rounded-t-[32px] lg:text-white': 'bg-white' }`}>
+      <div
+        className={`navbar container mx-auto md:mt-3 px-4 ${
+          pathname === "/" ||
+          pathname === "/category/All%20Product" ||
+          pathname === "/category/Laptops" ||
+          pathname === "/category/Phones" ||
+          pathname === "/category/Accessories" ||
+          pathname === "/category/Smartwatches" ||
+          pathname === "/category/Macbook" ||
+          pathname === "/category/Iphone"
+            ? "bg-[#9538E2] md:rounded-t-[32px] lg:text-white"
+            : "bg-white"
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -87,7 +99,11 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 font-bold">{links}</ul>
         </div>
         <div className="navbar-end space-x-2">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-white text-black">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost btn-circle bg-white text-black"
+          >
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
