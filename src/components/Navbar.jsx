@@ -9,16 +9,30 @@ const Navbar = () => {
   const wishList = getStoredWishList();
 
   const { pathname } = useLocation();
-  console.log(pathname);
+
 
   const renderBannerOrHeader = () => {
-    if (pathname === "/") {
+    if (
+      pathname === "/" ||
+      pathname === "/category/All%20Product" ||
+      pathname === "/category/Laptops" ||
+      pathname === "/category/Phones" ||
+      pathname === "/category/Accessories" ||
+      pathname === "/category/Smartwatches" ||
+      pathname === "/category/Macbook" ||
+      pathname === "/category/Iphone"
+    ) {
       return <Banner />;
     } else if (pathname === "/statistics") {
-      return <Header title="Statistics" description="Work in progress"/>;
+      return <Header title="Statistics" description="Work in progress!!!" />;
     } else if (pathname === "/dashboard") {
-      return <Header title="Dashboard" description="Explore the latest gadgets that will take your experience to the next
-        level. From smart devices to the coolest accessories, we have it all!"/>;
+      return (
+        <Header
+          title="Dashboard"
+          description="Explore the latest gadgets that will take your experience to the next
+        level. From smart devices to the coolest accessories, we have it all!"
+        />
+      );
     }
     return null;
   };
@@ -39,7 +53,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-100 container mx-auto px-4">
+      <div className={`navbar container mx-auto md:mt-3 px-4 ${pathname === '/' ? 'bg-[#9538E2] md:rounded-t-[32px] lg:text-white': 'bg-white' }`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -72,8 +86,8 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-bold">{links}</ul>
         </div>
-        <div className="navbar-end">
-          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+        <div className="navbar-end space-x-2">
+          <div tabIndex={0} role="button" className="btn btn-ghost btn-circle bg-white text-black">
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

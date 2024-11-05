@@ -3,8 +3,8 @@ import BannerImage from "../assets/banner.jpg";
 
 const Banner = () => {
   return (
-    <div className="container mx-auto px-4">
-      <div className="bg-[#9538E2]  text-center text-white pt-[118px]  pb-[268px] rounded-[32px] px-2 mb-36 sm:mb-56 lg:mb-[490px]">
+    <div className="container mx-auto relative">
+      <div className="bg-[#9538E2]  text-center text-white pt-12  pb-[268px] md:rounded-b-[32px] px-2 mb-36 sm:mb-56 lg:mb-[490px]">
         <h1 className="text-[56px] font-bold mb-6">
           Upgrade Your Tech Accessorize with Gadget Heaven Accessories
         </h1>
@@ -17,7 +17,7 @@ const Banner = () => {
         </NavLink>
       </div>
 
-      <div className="absolute -bottom-28 sm:-bottom-40 md:-bottom-56 lg:-bottom-80 2xl:-bottom-[500px] rounded-[32px] p-6 border mx-4 lg:mx-52 backdrop-blur-3xl">
+      <div className="absolute -bottom-28 sm:-bottom-40 md:-bottom-64 lg:-bottom-[340px] 2xl:-bottom-[500px] rounded-[32px] p-6 border mx-4 lg:mx-52 backdrop-blur-3xl">
         <img
           className="rounded-3xl object-cover"
           src={BannerImage}
