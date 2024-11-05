@@ -56,10 +56,24 @@ const clearCartList = () => {
   localStorage.removeItem("gadget-heaven-cart");
 };
 
+
+const removeFromWishList = (id) => {
+  const storedWishList = getStoredWishList();
+  const updatedWishList = storedWishList.filter((itemId) => itemId !== id);
+
+  if (storedWishList.length !== updatedWishList.length) {
+    localStorage.setItem("gadget-heaven-wishlist", JSON.stringify(updatedWishList));
+    toast.success("Item removed from your wishlist.");
+  } else {
+    toast.error("Item not found in wishlist.");
+  }
+};
+
 export {
   addToCart,
   addToWishList,
   getCartList,
   getStoredWishList,
   clearCartList,
+  removeFromWishList
 };

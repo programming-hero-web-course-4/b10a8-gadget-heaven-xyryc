@@ -1,8 +1,13 @@
 import { FaRegHeart } from "react-icons/fa";
 import { IoCartOutline } from "react-icons/io5";
 import { useLoaderData, useParams } from "react-router-dom";
-import { addToCart, addToWishList } from "../utility/addToLs";
-import { useContext } from "react";
+import {
+  addToCart,
+  addToWishList,
+  getStoredWishList,
+  removeFromWishList,
+} from "../utility/addToLs";
+import { useContext, useEffect, useState } from "react";
 import { CartContext, WishlistContext } from "../layouts/MainLayout";
 import ReactStars from "react-rating-stars-component";
 import { FaStar } from "react-icons/fa";
@@ -30,6 +35,24 @@ const ProductDetails = () => {
 
   const [cart, setCart] = useContext(CartContext);
   const [wishlist, setWishlist] = useContext(WishlistContext);
+  const [isWishlisted, setIsWishlisted] = useState(false);
+
+  useEffect(() => {
+    const storedWishList = getStoredWishList();
+    setIsWishlisted(storedWishList.includes(currentId));
+  }, [currentId]);
+
+  const handleWishlistClick = () => {
+    if (!isWishlisted) {
+      addToWishList(currentId);
+      setWishlist(wishlist + 1); // Update wishlist count
+      setIsWishlisted(true); // Disable button
+    } else {
+      removeFromWishList(currentId);
+      setWishlist(wishlist - 1); // Update wishlist count
+      setIsWishlisted(false); // Enable button
+    }
+  };
 
   return (
     <div>
@@ -105,11 +128,9 @@ const ProductDetails = () => {
                 <IoCartOutline />
               </a>
               <a
-                onClick={() => {
-                  addToWishList(currentId);
-                  setWishlist(wishlist + 1);
-                }}
+                onClick={handleWishlistClick}
                 className="btn btn-circle btn-outline"
+                disabled={isWishlisted}
               >
                 <FaRegHeart />
               </a>
