@@ -101,6 +101,7 @@ const Dashboard = () => {
 
   return (
     <div>
+      {/* modal */}
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-8 rounded-lg text-center">
@@ -122,8 +123,8 @@ const Dashboard = () => {
         </div>
       )}
 
-      <div className=" text-center mb-8">
-        <div className="pb-8 space-x-6 border bg-[#9538E2] border-t-2 border-[#9538E2] mb-12">
+      <div className="text-center mb-8">
+        <div className="pb-8 md:space-x-6 border bg-[#9538E2] border-t-2 border-[#9538E2] mb-12 space-y-3 md:space-y-0">
           <button
             onClick={() => handleTabClick("cart")}
             className={`btn btn-wide rounded-[32px]  ${
@@ -174,7 +175,13 @@ const Dashboard = () => {
                       <p className="font-semibold text-xl text-gray-800 mb-4">
                         Price: ${item.price}
                       </p>
-                      <button className={` ${activeTab === 'wishlist' ? "" : "hidden"} btn btn-sm rounded-[32px] bg-[#9538E2] text-white`}>Add to Cart</button>
+                      <button
+                        className={` ${
+                          activeTab === "wishlist" ? "" : "hidden"
+                        } btn btn-sm rounded-[32px] bg-[#9538E2] text-white`}
+                      >
+                        Add to Cart
+                      </button>
                     </div>
 
                     {/* remove button */}

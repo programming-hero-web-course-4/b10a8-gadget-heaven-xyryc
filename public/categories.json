@@ -9,22 +9,22 @@
   },
   {
     "id": 3,
-    "category": "Laptops"
+    "category": "Iphone"
   },
   {
     "id": 4,
-    "category": "Phones"
+    "category": "Laptops"
   },
   {
     "id": 5,
-    "category": "Accessories"
+    "category": "Phones"
   },
   {
     "id": 6,
-    "category": "Smartwatches"
+    "category": "Accessories"
   },
   {
     "id": 7,
-    "category": "Iphone"
+    "category": "Smartwatches"
   }
 ]

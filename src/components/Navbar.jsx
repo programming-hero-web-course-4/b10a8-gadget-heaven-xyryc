@@ -23,7 +23,12 @@ const Navbar = () => {
     ) {
       return <Banner />;
     } else if (pathname === "/statistics") {
-      return <Header title="Statistics" description="Work in progress!!!" />;
+      return (
+        <Header
+          title="Statistics"
+          description="Explore detailed insights on product prices, ratings, and availability to make informed purchasing decisions on Gadget Heaven."
+        />
+      );
     } else if (pathname === "/dashboard") {
       return (
         <Header

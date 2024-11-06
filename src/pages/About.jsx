@@ -2,7 +2,6 @@ import { FaCheckCircle } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
 import { NavLink } from "react-router-dom";
 
-
 const About = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-16">
@@ -11,7 +10,6 @@ const About = () => {
       </Helmet>
 
       <div className="container mx-auto px-4">
-
         {/* About Us Section */}
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <img
@@ -45,12 +43,35 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Values or features */}
             {[
-              { title: "Quality Assurance", description: "All products are rigorously tested to ensure top quality." },
-              { title: "Customer Support", description: "Our dedicated team is here to help you 24/7." },
-              { title: "Innovative Products", description: "We bring the latest innovations from top tech brands." },
-              { title: "Secure Payments", description: "We prioritize your security with trusted payment options." },
-              { title: "Fast Shipping", description: "Quick and reliable shipping for a seamless experience." },
-              { title: "Satisfaction Guarantee", description: "We stand by our products with a satisfaction guarantee." },
+              {
+                title: "Quality Assurance",
+                description:
+                  "All products are rigorously tested to ensure top quality.",
+              },
+              {
+                title: "Customer Support",
+                description: "Our dedicated team is here to help you 24/7.",
+              },
+              {
+                title: "Innovative Products",
+                description:
+                  "We bring the latest innovations from top tech brands.",
+              },
+              {
+                title: "Secure Payments",
+                description:
+                  "We prioritize your security with trusted payment options.",
+              },
+              {
+                title: "Fast Shipping",
+                description:
+                  "Quick and reliable shipping for a seamless experience.",
+              },
+              {
+                title: "Satisfaction Guarantee",
+                description:
+                  "We stand by our products with a satisfaction guarantee.",
+              },
             ].map((item, index) => (
               <div key={index} className="flex items-start">
                 <FaCheckCircle className="text-[#9538E2] text-3xl mr-4" />
@@ -74,11 +95,24 @@ const About = () => {
             Our team of experts is passionate about technology and dedicated to
             delivering an exceptional shopping experience.
           </p>
-          <div className="flex justify-center gap-8">
+          <div className="flex justify-center gap-8 drop-shadow-md">
             {[
-              { name: "Mohammad Anik", role: "CEO & Founder", image: "https://i.ibb.co.com/7YSvbxv/anik.jpg" },
-              { name: "Mark Thompson", role: "Lead Developer", image: "https://i.ibb.co.com/6gb2nzs/pexels-photo-7163464.jpg" },
-              { name: "Sarah Lee", role: "Customer Support", image: "https://i.ibb.co.com/yWLr9nh/pexels-photo-28570314.jpg" },
+              {
+                name: "Mohammad Anik",
+                role: "CEO & Founder",
+                image: "https://i.ibb.co.com/7YSvbxv/anik.jpg",
+              },
+              {
+                name: "Jawed Karim",
+                role: "Lead Developer",
+                image:
+                  "https://i.ibb.co.com/jL5P1zz/jawed-karim-married-status-now.webp",
+              },
+              {
+                name: "Sarah Lee",
+                role: "Customer Support",
+                image: "https://i.ibb.co.com/yWLr9nh/pexels-photo-28570314.jpg",
+              },
             ].map((member, index) => (
               <div key={index} className="text-center">
                 <img
@@ -86,7 +120,9 @@ const About = () => {
                   alt={member.name}
                   className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg"
                 />
-                <h3 className="text-lg font-bold text-gray-800">{member.name}</h3>
+                <h3 className="text-lg font-bold text-gray-800">
+                  {member.name}
+                </h3>
                 <p className="text-gray-500">{member.role}</p>
               </div>
             ))}
@@ -99,9 +135,13 @@ const About = () => {
             Ready to Find Your Next Gadget?
           </h2>
           <p className="text-gray-600 mb-6">
-            Explore our wide selection and experience the future of technology with Gadget Heaven.
+            Explore our wide selection and experience the future of technology
+            with Gadget Heaven.
           </p>
-          <NavLink to='/' className="btn rounded-[32px] bg-[#9538E2] text-white px-8 py-3 shadow-lg hover:bg-[#7f2fbb] transition">
+          <NavLink
+            to="/"
+            className="btn rounded-[32px] bg-[#9538E2] text-white px-8 py-3 shadow-lg hover:bg-[#7f2fbb] transition"
+          >
             Shop Now
           </NavLink>
         </div>
