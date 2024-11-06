@@ -5,8 +5,8 @@ import {
   addToCart,
   addToWishList,
   getStoredWishList,
-  removeFromWishList,
 } from "../utility/addToLs";
+import { removeFromWishList } from "../utility/removeFromLs";
 import { useContext, useEffect, useState } from "react";
 import { CartContext, WishlistContext } from "../layouts/MainLayout";
 import ReactStars from "react-rating-stars-component";
@@ -83,7 +83,11 @@ const ProductDetails = () => {
             <p className="text-xl font-semibold text-gray-800 mb-4">
               Price: $ {price}
             </p>
-            <button className={`btn btn-sm btn-outline rounded-[32px] ${availability ? 'btn-success': 'btn-error'}`}>
+            <button
+              className={`btn btn-sm btn-outline rounded-[32px] ${
+                availability ? "btn-success" : "btn-error"
+              }`}
+            >
               {availability ? "In Stock" : "Out of Stock"}
             </button>
             <p className="my-4  text-lg text-gray-600">{description}</p>

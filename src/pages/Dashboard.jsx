@@ -9,6 +9,10 @@ import { TbSortDescending2 } from "react-icons/tb";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import SuccessImg from "../assets/success.png";
+import {
+  removeFromCartList,
+  removeFromWishList,
+} from "../utility/removeFromLs";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("cart");
@@ -68,6 +72,16 @@ const Dashboard = () => {
     setTotalPrice(0);
     setShowModal(false);
     navigate("/");
+  };
+
+  const handleRemoveFromCart = (id) => {
+    removeFromCartList(id);
+    setItems((prevItems) => prevItems.filter((item) => item.product_id !== id));
+  };
+
+  const handleRemoveFromWishlist = (id) => {
+    removeFromWishList(id);
+    setItems((prevItems) => prevItems.filter((item) => item.product_id !== id));
   };
 
   const cartDiv = (
@@ -136,7 +150,9 @@ const Dashboard = () => {
             Cart
           </button>
           <button
-            onClick={() => handleTabClick("wishlist")}
+            onClick={() => {
+              handleTabClick("wishlist");
+            }}
             className={`btn btn-wide rounded-[32px] ${
               activeTab === "wishlist"
                 ? "bg-white text-[#9538E2]"
@@ -184,8 +200,36 @@ const Dashboard = () => {
                       </button>
                     </div>
 
-                    {/* remove button */}
-                    <button className="btn btn-circle btn-outline text-red-600">
+                    {/* cart remove button */}
+                    <button
+                      onClick={() => handleRemoveFromCart(item.product_id)}
+                      className={`btn btn-circle btn-outline text-red-600 ${
+                        activeTab === "cart" ? "" : "hidden"
+                      }`}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+
+                    {/* wishlist remove button */}
+                    <button
+                      onClick={() => handleRemoveFromWishlist(item.product_id)}
+                      className={`btn btn-circle btn-outline text-red-600 ${
+                        activeTab === "wishlist" ? "" : "hidden"
+                      }`}
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"
