@@ -10,7 +10,7 @@ This project demonstrates various fundamental React concepts:
 1. **Components**: Modular, reusable components for each UI section.
 2. **Props**: Passing data between parent and child components.
 3. **State**: Managing dynamic data using `useState`.
-4. **Hooks**: Using `useEffect` for side effects, `useContext` for global state management, and `useRef` for DOM manipulation.
+4. **Hooks**: Using `useEffect` for side effects, `useContext` for global state management
 5. **React Router**: Implementing page navigation and category-based views.
 
 

@@ -77,6 +77,19 @@ const Dashboard = () => {
   const handleRemoveFromCart = (id) => {
     removeFromCartList(id);
     setItems((prevItems) => prevItems.filter((item) => item.product_id !== id));
+    const storedCartList = getCartList();
+    const storedCartListInt = storedCartList.map((id) => parseInt(id));
+
+    const cartList = allProducts.filter((product) =>
+      storedCartListInt.includes(product.product_id)
+    );
+
+    const calculateTotalPrice = cartList.reduce(
+      (acc, item) => acc + item.price,
+      0
+    );
+
+    setTotalPrice(calculateTotalPrice);
   };
 
   const handleRemoveFromWishlist = (id) => {
